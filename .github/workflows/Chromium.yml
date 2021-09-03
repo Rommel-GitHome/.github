@@ -1,6 +1,11 @@
 # This is a basic workflow that is manually triggered
 
 name: Install Chromium Browser
+apt:
+    name: chromium-browser
+    state: latest
+    update_cache: yes
+    cache_valid_time: "{{ aptcachetime }}"
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
