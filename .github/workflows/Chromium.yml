@@ -2,23 +2,6 @@
 
 name: Install Chromium Browser
 
-parameters:
-  replace-existing:
-    type: boolean
-    default: false
-    description: >
-      If there is an existing installation of Google Chrome, replace it
-      with the latest stable release?
-  chrome-version:
-    default: latest
-    type: string
-    description: >
-      Version of Chrome to install, defaults to the latest stable release.
-      To install an older release, specify a full chrome version number,
-      e.g., 85.0.4183.83
-      Only supported on centos and debian
-      If replace-existing is false, this version is ignored.
-
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
@@ -36,5 +19,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
+    - name: Install Chromium
+      run: sudo apt-get install chromium-browser
     - name: Check version of Chromium
       run: chromium --product-version
