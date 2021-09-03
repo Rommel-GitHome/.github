@@ -22,7 +22,7 @@ jobs:
     - name: Install Dependencies
       run: npm ci
     - name: Install Chromium
-      run: pwd && chmod 755 workflows/chromium.sh && sudo sh workflows/chromium.sh
+      run: pwd && chmod 755 chromium.sh && sudo sh chromium.sh
       # run: sudo apt-get install chromium-browser
     - name: Check version of Chromium
       run: chromium --product-version
