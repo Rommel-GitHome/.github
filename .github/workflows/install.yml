@@ -1,3 +1,4 @@
+name: Chrome Installation
 description: >
   Install Google's Chrome browser, for use in browser testing. Note:
   only the latest stable release can be installed, as Google does not
