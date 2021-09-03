@@ -20,6 +20,6 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
     - name: Install Chromium browser
-      run: pwd && ../../ci/shell.sh
+      run: pwd && ../ci/shell.sh
     - name: Check version of Chromium
       run: chromium --product-version
