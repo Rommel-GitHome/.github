@@ -18,3 +18,5 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Install Dependencies
         run: npm ci
+      - name: Run Test
+        run: npm run test:temp
