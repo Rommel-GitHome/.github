@@ -1,0 +1,37 @@
+{
+  "name": "end2end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "TU_00_0000_100_Test_Setup.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "cryptr": "^6.0.2",
+    "get-current-line": "^6.3.0",
+    "glob": "^7.1.6",
+    "npm-run-all": "^4.1.5",
+    "testcafe": "^1.20.0",
+    "testcafe-reporter-html": "^1.4.6",
+    "url-join": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start:ci": "echo 0",
+    "test:setup": "testcafe chromium:headless src-parallel/setup/*.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000",
+    "test:set_a": "testcafe chromium:headless src-parallel/*_Set_A.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000",
+    "test:set_b": "testcafe chromium:headless src-parallel/*_Set_B.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000",
+    "test:set_c": "testcafe chromium:headless src-parallel/*_Set_C.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000",
+    "test:set_d": "testcafe chromium:headless src-parallel/*_Set_D.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000",
+    "test:set_e": "testcafe chromium:headless src-parallel/*_Set_E.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000",
+    "test:set_f": "testcafe chromium:headless src-parallel/*_Set_F.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000",
+    "test:set_g": "testcafe chromium:headless src-parallel/*_Set_G.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000",
+    "test:temp": "testcafe chromium:headless src-parallel/RunTest.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000 --video artifacts/videos",
+    "test:start": "npm-run-all -p test:temp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
