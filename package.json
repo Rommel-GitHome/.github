@@ -27,7 +27,7 @@
     "test:set_e": "testcafe chromium:headless src-parallel/*_Set_E.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000",
     "test:set_f": "testcafe chromium:headless src-parallel/*_Set_F.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000",
     "test:set_g": "testcafe chromium:headless src-parallel/*_Set_G.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000",
-    "test:temp": "testcafe chromium:headless Temp.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000 --video artifacts/videos",
+    "test:temp": "testcafe chromium:headless Temp.js --skip-js-errors --speed 0.75 --disable-multiple-windows --browser-init-timeout 180000 --video artifacts/videos --video-options failedOnly=false,pathPattern=${DATE}_${TIME}/${FIXTURE}/${TEST}.mp4",
     "test:start": "npm-run-all -p test:temp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
